@@ -1,0 +1,167 @@
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body{
+  height: 100%;
+  margin: 0;
+}
+  
+.node .control input, .node .input-control input {
+  width: 140px;
+}
+
+/* 入力ボックス */
+select, input {
+  width: 100%;
+  border-radius: 30px;
+  background-color: #FBFBFB;
+  padding: 2px 6px;
+  border: 1px solid #444444;
+  font-size: 110%;
+  width: 170px;
+}
+  
+/* node */
+.node{
+  background-color:#9DA5A2;
+  border: 2px solid #444444;
+}
+
+/* nodeホバー時 */
+.node:hover {
+  background: #E0E4D6;
+}
+
+/* node選択時黄色 */
+.node.selected {
+  background: #60CAAD;
+  border-color: #444444;
+}
+
+.node .title {
+  color: #FBFBFB;
+  font-family: "MS PGothic", "Osaka", Arial, sans-serif;
+  /* font-weight: bold; */
+}
+
+.title{
+  padding: 0px;
+}
+
+
+/* 線 */
+.connection .main-path {
+  fill: none;
+  stroke-width: 5px;
+  stroke: #60CAAD; }
+
+
+/* .container {
+  flex: 1;
+  overflow: hidden;
+
+}
+.editor {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  height: 10px;
+} */
+
+.main{
+  display: flex;
+}
+
+.dock_title{
+  width: 200px;
+  height: 50px;
+    background-color:#444444;
+    text-align: center;
+    line-height: 10px;
+      color: #FBFBFB;
+}
+  
+.dock {
+  position: fixed;
+  top: 50px;
+  height: 100vh;
+  width: 180px;
+  /* overflow-x: auto; */
+  /* overflow-y: hidden; */
+  /* white-space: nowrap; */
+  padding: 10px;
+  background-color:#444444;
+}
+
+.App{
+  position: absolute;
+  left: 200px;
+  width: 100vw;
+}
+  
+.dock-item {
+  display: inline-block;
+  vertical-align: top;
+  transform: scale(0.8);
+  transform-origin: 50% 0;
+  opacity: 0.7;
+}
+  
+.dock-item:hover {
+  opacity: 0.9;
+}
+  
+
+
+
+/* ? */
+.socket.multiple {
+  border-color: red;
+  
+}
+
+.plus{
+  font-size: 24px;
+}
+
+/* 数値の増減ボタンを削除 */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* コメント */
+.inline-comment, .frame-comment {
+  color: black;
+  font-family: "MS PGothic", "Osaka", Arial, sans-serif;
+  padding: 12px;
+  position: absolute;
+  cursor: move;
+  /* border: 2px solid #444444; */
+  border-radius: 16px; }
+  .inline-comment:focus, .frame-comment:focus {
+    /* outline: none; */
+    background: #60CAAD;
+  border: 3px solid #9DA5A2;
+     }
+
+     .inline-comment, .frame-comment:hover {
+  background: #E0E4D6;
+}
+
+.inline-comment {
+  z-index: 4;
+  border: 3px solid #444444;
+  background: #9DA5A2;
+   }
+
+.frame-comment {
+  z-index: -10;
+  border: 3px solid #444444;
+  background: #9DA5A2;
+   }
+
+
